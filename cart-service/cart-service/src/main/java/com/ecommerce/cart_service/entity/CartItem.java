@@ -1,4 +1,4 @@
-package com.ecommerce.product_service.entity;
+package com.ecommerce.cart_service.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,21 +8,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class Product {
+@NoArgsConstructor
+@Entity
+public class CartItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private Long productId;
+    private String productName;
     private double price;
-    private String image;
-    private String category;
-
-//    private double rating;
-//    private String tag;
+    private int quantity;
+    private Long userId;
 }

@@ -21,26 +21,36 @@ public class ProductService{
     public List<ProductDto> getAllProducts(){
         return repo.findAll()
                 .stream()
-                .map(this::covertToDto)
+                .map(this::convertToDTO)
                 .toList();
     }
 
     public List<ProductDto> searchProduct(String keyword){
         return repo.findByNameContainingIgnoreCase(keyword)
                 .stream()
-                .map(this::covertToDto)
+                .map(this::convertToDTO)
                 .toList();
     }
 
     public List<ProductDto> getByCategory(String category){
         return repo.findByCategory(category)
                 .stream()
-                .map(this::covertToDto)
+                .map(this::convertToDTO)
                 .toList();
     }
 
-    public Product save(Product product){
-        return repo.save(product);
+    public ProductDto save(ProductDto dto){
+        Product product = new Product(
+                null,
+                dto.getName(),
+                dto.getPrice(),
+                dto.getImage(),
+                dto.getCategory()
+        );
+
+        Product saved = repo.save(product);
+
+        return convertToDTO(saved);
     }
 
     public Page<ProductDto> filterProducts(int page, int size, String keyword, String category) {
@@ -57,14 +67,14 @@ public class ProductService{
         } else {
             result =  repo.findAll(pageable);
         }
-        return result.map(this::covertToDto);
+        return result.map(this::convertToDTO);
     }
     // Pagination
     public Page<Product> getProductsPage(int page, int size){
         return  repo.findAll(PageRequest.of(page, size));
     }
 
-    private ProductDto covertToDto(Product p){
+    private ProductDto convertToDTO(Product p){
         return new ProductDto(
                 p.getId(),
                 p.getName(),

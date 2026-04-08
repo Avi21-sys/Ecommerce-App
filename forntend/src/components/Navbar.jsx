@@ -1,30 +1,48 @@
-import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
-    const {cart} = useContext(CartContext);
 
-    return(
+    const [count, setCount] = useState(0);
+
+    const fetchCartCount = () => {
+        fetch("http://localhost:8081/api/cart")
+            .then(res => res.json())
+            .then(data => {
+                const totalQty = data.reduce((sum, item) => sum + item.quantity, 0);
+                setCount(totalQty);
+            });
+    };
+
+    useEffect(() => {
+        fetchCartCount();
+    }, []);
+
+    useEffect(() => {
+    const interval = setInterval(fetchCartCount, 1000);
+    return () => clearInterval(interval);
+    }, []);
+
+    return (
         <div style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "20px 40px",
-            background: "#111",
-            color: "#fff",
             position: "sticky",
             top: 0,
-            zIndex: 100
+            zIndex: 1000,
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "15px 30px",
+            background: "#111",
+            color: "#fff",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
+            transition: "all 0.3s ease"
+            
         }}>
-            <h2 style={{letterSpacing: "1px"}}>E-Commerce</h2>
-
-            <Link to="/" style={{ color: "#fff",textDecoration: "none",fontWeight: "bold"}}>
-              
+            <Link to="/" style={{ color: "#fff", textDecoration: "none" }}>
+                Home
             </Link>
 
-            <Link to="/cart" style={{color: "#fff",textDecoration: "none",fontWeight: "bold"}}>
-                Cart ({cart.length})
+            <Link to="/cart" style={{ color: "#fff", textDecoration: "none" }}>
+                Cart ({count})
             </Link>
         </div>
     );

@@ -35,8 +35,8 @@ public class ProductController {
     }
 
     @PostMapping
-    public Product addProduct(@RequestBody Product product){
-        return service.save(product);
+    public ProductDto addProduct(@RequestBody ProductDto dto){
+        return service.save(dto);
     }
 
     @GetMapping("/filter")
