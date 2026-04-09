@@ -12,18 +12,46 @@ const Checkout = () => {
 
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
-    const placeOrder = () => {
+    const placeOrder = async () => {
 
-        alert("Order placed successfully!");
+        try{
+            const order = {
+                totalAmount: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
+                items: cart.map(item => ({
+                    productId: item.productId,
+                    productName: item.productName,
+                    price: item.price,
+                    quantity: item.quantity
+                }))
+            };
 
-    // Clear cart (call delete for each item)
-        cart.forEach(item => {
-            fetch(`http://localhost:8081/api/cart/${item.id}`, {
-                method: "DELETE"
+            const res = await fetch("http://localhost:8082/api/orders", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(order)
             });
-        });
 
-        setCart([]);
+             if (!res.ok) {
+                throw new Error("Order failed");
+            }
+
+            // Clear cart in parallel (faster)
+            await Promise.all(
+                cart.map(item =>
+                    fetch(`http://localhost:8081/api/cart/${item.id}`, {
+                        method: "DELETE"
+                    })
+                )
+            );
+
+            alert("Order placed successfully!");
+        }
+        catch (err) {
+            console.error(err);
+            alert("Something went wrong!");
+        }
     };
 
     return (
