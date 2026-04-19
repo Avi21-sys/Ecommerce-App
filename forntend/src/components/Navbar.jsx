@@ -1,17 +1,33 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { fetchWithAuth } from "../utils/api";
 
 const Navbar = () => {
 
     const [count, setCount] = useState(0);
 
     const fetchCartCount = () => {
-        fetch("http://localhost:8081/api/cart")
-            .then(res => res.json())
+        if (!localStorage.getItem("token")) {
+            setCount(0);
+            return;
+        }
+
+        fetchWithAuth("http://localhost:8081/api/cart")
+            .then(res => {
+                if (!res.ok) {
+                    if (res.status === 401) {
+                        localStorage.removeItem("token");
+                    }
+                    setCount(0);
+                    return [];
+                }
+                return res.json();
+            })
             .then(data => {
                 const totalQty = data.reduce((sum, item) => sum + item.quantity, 0);
                 setCount(totalQty);
-            });
+            })
+            .catch(() => setCount(0));
     };
 
     useEffect(() => {

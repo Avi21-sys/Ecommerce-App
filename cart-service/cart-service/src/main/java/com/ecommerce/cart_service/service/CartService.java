@@ -30,7 +30,7 @@ public class CartService {
     // DTO --> Entity
     public CartItem toEntity(CartItemDto dto, Long userId){
         return new CartItem(
-                dto.getId(),
+                null,
                 dto.getProductId(),
                 dto.getProductName(),
                 dto.getPrice(),
@@ -48,6 +48,7 @@ public class CartService {
     }
 
     public CartItemDto addToCart(CartItemDto dto, Long userId){
+
         CartItem existing = repo.findByProductIdAndUserId(dto.getProductId(), userId);
 
         if(existing != null){
@@ -59,7 +60,15 @@ public class CartService {
         return toDto(saved);
     }
 
-    public void remove(Long id){
+    public void remove(Long id, Long userId){
+        CartItem item = repo.findById(id)
+                .orElseThrow(() -> new RuntimeException("Item not found"));
+
+        if (!item.getUserId().equals(userId)) {
+            throw new RuntimeException("Unauthorized");
+        }
+
         repo.deleteById(id);
     }
+
 }

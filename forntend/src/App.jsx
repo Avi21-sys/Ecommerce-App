@@ -3,6 +3,8 @@ import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Checkout from "./pages/Checkout";
+import Login from "./pages/Login";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -10,8 +12,20 @@ function App() {
       <Navbar />
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/cart" element={<Cart/>}/>
-          <Route path="/checkout" element={<Checkout />} />
+
+          <Route path="/cart" element={
+            <PrivateRoute>
+              <Cart/>
+            </PrivateRoute>
+          }/>
+
+          <Route path="/checkout" element={
+            <PrivateRoute>
+              <Checkout />
+            </PrivateRoute>
+          } />
+
+          <Route path="/login" element={<Login />} />
         </Routes>
       
     </BrowserRouter>

@@ -1,9 +1,6 @@
 package com.ecommerce.cart_service.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,5 +19,7 @@ public class CartItem {
     private String productName;
     private double price;
     private int quantity;
+
+    @Column
     private Long userId;
 }

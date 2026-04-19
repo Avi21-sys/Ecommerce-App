@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { fetchWithAuth } from "../utils/api";
 
 export const CartContext = createContext();
 
@@ -8,7 +9,13 @@ const CartProvider = ({children}) => {
     console.log(cart);
     const addToCart = async(product) => {
         try{
-            const res = await fetch("http://localhost:8081/api/cart", {
+            if (!localStorage.getItem("token")) {
+                alert("Please login to add items to cart");
+                window.location.href = "/login";
+                return;
+            }
+
+            const res = await fetchWithAuth("http://localhost:8081/api/cart", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -20,6 +27,11 @@ const CartProvider = ({children}) => {
                     quantity: 1
                 })
             });
+
+            if (!res.ok) {
+                throw new Error(`Add to cart failed with status ${res.status}`);
+            }
+
             const data = await res.json();
             console.log("Added:", data);
         } catch(err){
@@ -29,7 +41,7 @@ const CartProvider = ({children}) => {
 
     const removeFromCart = async (id) => {
         try {
-            await fetch(`http://localhost:8081/api/cart/${id}`, {
+            await fetchWithAuth(`http://localhost:8081/api/cart/${id}`, {
             method: "DELETE"
         });
 

@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
+import { fetchWithAuth } from "../utils/api";
 
 const Checkout = () => {
 
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8081/api/cart")
-            .then(res => res.json())
+        fetchWithAuth("http://localhost:8081/api/cart")
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error(`Cart request failed with status ${res.status}`);
+                }
+                return res.json();
+            })
             .then(data => setCart(data));
     }, []);
 
@@ -25,7 +31,7 @@ const Checkout = () => {
                 }))
             };
 
-            const res = await fetch("http://localhost:8082/api/orders", {
+            const res = await fetchWithAuth("http://localhost:8082/api/orders", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -40,7 +46,7 @@ const Checkout = () => {
             // Clear cart in parallel (faster)
             await Promise.all(
                 cart.map(item =>
-                    fetch(`http://localhost:8081/api/cart/${item.id}`, {
+                    fetchWithAuth(`http://localhost:8081/api/cart/${item.id}`, {
                         method: "DELETE"
                     })
                 )

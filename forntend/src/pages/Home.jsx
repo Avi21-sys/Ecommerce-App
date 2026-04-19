@@ -23,7 +23,12 @@ const Home = () =>{
         const url = `http://localhost:8080/api/products/filter?page=${page}&size=5&keyword=${debouncedSearch}&category=${category}`;
 
         fetch(url)
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error(`Products request failed with status ${res.status}`);
+                }
+                return res.json();
+            })
             .then(data => {
                 setProducts(data.content);
                 setTotalPages(data.totalPages);
