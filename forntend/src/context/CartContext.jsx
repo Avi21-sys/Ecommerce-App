@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { fetchWithAuth } from "../utils/api";
+import { API_BASE_URL, fetchWithAuth } from "../utils/api";
 
 export const CartContext = createContext();
 
@@ -15,7 +15,7 @@ const CartProvider = ({children}) => {
                 return;
             }
 
-            const res = await fetchWithAuth("http://localhost:8081/api/cart", {
+            const res = await fetchWithAuth(`${API_BASE_URL}/api/cart`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -41,7 +41,7 @@ const CartProvider = ({children}) => {
 
     const removeFromCart = async (id) => {
         try {
-            await fetchWithAuth(`http://localhost:8081/api/cart/${id}`, {
+            await fetchWithAuth(`${API_BASE_URL}/api/cart/${id}`, {
             method: "DELETE"
         });
 

@@ -1,5 +1,6 @@
 import ProductCard from "../components/ProductCard";
 import { useState, useEffect } from "react";
+import { API_BASE_URL } from "../utils/api";
 
 const Home = () =>{
     const[search, setSearch] = useState("");
@@ -20,7 +21,7 @@ const Home = () =>{
 
    useEffect(() => {
 
-        const url = `http://localhost:8080/api/products/filter?page=${page}&size=5&keyword=${debouncedSearch}&category=${category}`;
+        const url = `${API_BASE_URL}/api/products/filter?page=${page}&size=5&keyword=${debouncedSearch}&category=${category}`;
 
         fetch(url)
             .then(res => {

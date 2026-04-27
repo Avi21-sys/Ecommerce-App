@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { fetchWithAuth } from "../utils/api";
+import { API_BASE_URL, fetchWithAuth } from "../utils/api";
 
 const Checkout = () => {
 
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        fetchWithAuth("http://localhost:8081/api/cart")
+        fetchWithAuth(`${API_BASE_URL}/api/cart`)
             .then(res => {
                 if (!res.ok) {
                     throw new Error(`Cart request failed with status ${res.status}`);
@@ -31,7 +31,7 @@ const Checkout = () => {
                 }))
             };
 
-            const res = await fetchWithAuth("http://localhost:8082/api/orders", {
+            const res = await fetchWithAuth(`${API_BASE_URL}/api/orders`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -46,7 +46,7 @@ const Checkout = () => {
             // Clear cart in parallel (faster)
             await Promise.all(
                 cart.map(item =>
-                    fetchWithAuth(`http://localhost:8081/api/cart/${item.id}`, {
+                    fetchWithAuth(`${API_BASE_URL}/api/cart/${item.id}`, {
                         method: "DELETE"
                     })
                 )

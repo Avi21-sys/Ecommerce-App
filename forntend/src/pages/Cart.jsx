@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { fetchWithAuth } from "../utils/api";
+import { API_BASE_URL, fetchWithAuth } from "../utils/api";
 
 const Cart = () => {
 
     const [cart, setCart] = useState([]);
 
     const fetchCart = () => {
-        fetchWithAuth("http://localhost:8081/api/cart")
+        fetchWithAuth(`${API_BASE_URL}/api/cart`)
             .then(res => {
                 if (!res.ok) {
                     throw new Error(`Cart request failed with status ${res.status}`);
@@ -23,14 +23,14 @@ const Cart = () => {
     }, []);
 
     const removeItem = (id) => {
-        fetchWithAuth(`http://localhost:8081/api/cart/${id}`, {
+        fetchWithAuth(`${API_BASE_URL}/api/cart/${id}`, {
             method: "DELETE"
         })
         .then(() => fetchCart());
     };
 
     const increaseQty = (item) => {
-        fetchWithAuth("http://localhost:8081/api/cart", {
+        fetchWithAuth(`${API_BASE_URL}/api/cart`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -50,7 +50,7 @@ const Cart = () => {
             return;
         }
 
-        fetchWithAuth("http://localhost:8081/api/cart", {
+        fetchWithAuth(`${API_BASE_URL}/api/cart`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

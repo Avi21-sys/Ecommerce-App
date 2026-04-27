@@ -13,5 +13,7 @@ public class OrderDto {
 
     private Long id;
     private double totalAmount;
+    private String status;
+    private Long userId;
     private List<OrderItemDto> items;
 }

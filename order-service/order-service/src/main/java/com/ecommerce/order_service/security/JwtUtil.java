@@ -24,6 +24,17 @@ public class JwtUtil {
                 .getSubject();
 
     }
+
+    public Long extractUserId(String token) {
+        Number userId = Jwts.parserBuilder()
+                .setSigningKey(getKey())
+                .build()
+                .parseClaimsJws(token)
+                .getBody()
+                .get("userId", Number.class);
+
+        return userId == null ? null : userId.longValue();
+    }
 }
 
 

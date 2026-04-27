@@ -35,6 +35,16 @@ public class JwtFilter implements Filter {
 
         try{
             String username = jwtUtil.extractUsername(token);
+            Long userId = jwtUtil.extractUserId(token);
+
+            if (userId == null) {
+                throw new IllegalArgumentException("JWT does not contain userId");
+            }
+
+            // store in request
+            req.setAttribute("username", username);
+            req.setAttribute("userId", userId);
+
             UsernamePasswordAuthenticationToken authentication =
                     new UsernamePasswordAuthenticationToken(username, null, Collections.emptyList());
             SecurityContextHolder.getContext().setAuthentication(authentication);

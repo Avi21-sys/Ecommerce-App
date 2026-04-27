@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f0a8a083-2295-42ae-a32d-7ad1a8cdcecf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/api-gateway.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cart-service/cart-service/src/main/java/com/ecommerce/cart_service/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cart-service/cart-service/src/main/java/com/ecommerce/cart_service/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cart-service/cart-service/src/main/java/com/ecommerce/cart_service/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cart-service/cart-service/src/main/java/com/ecommerce/cart_service/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forntend/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../forntend/src/components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forntend/src/context/CartContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../forntend/src/context/CartContext.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forntend/src/pages/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../forntend/src/pages/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forntend/src/pages/Checkout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../forntend/src/pages/Checkout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forntend/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../forntend/src/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forntend/src/pages/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../forntend/src/pages/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forntend/src/utils/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/../forntend/src/utils/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/dto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/dto/OrderDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/repository/OrderItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/repository/OrderItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/repository/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/security/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/security/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/security/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/service/OrderService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_D:/ECommerce/ecommerce-app/api-gateway" value="3Cfy6dX0cChdQ2dUY08Exu4ANwT" />
+    </persistenceIdMap>
+  </component>
+  <component name="CopilotUserSelectedChatMode">
+    <option name="chatModeId" value="Agent" />
+  </component>
+  <component name="CopilotUserSelectedModel">
+    <selectedModels>
+      <entry key="agent-panel" value="GPT-5 mini" />
+      <entry key="chat-panel" value="GPT-5 mini" />
+    </selectedModels>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Avi21-sys&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Avi21-sys/Ecommerce-App.git&quot;,
+    &quot;accountId&quot;: &quot;bcea987d-5a15-4d03-839e-d9e8ddd40514&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="3Cfy6dX0cChdQ2dUY08Exu4ANwT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.api-gateway.executor": "Run",
+    "Maven.api-gateway [clean,install].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/ECommerce/ecommerce-app/api-gateway",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.customization.CustomizationConfigurable"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="api-gateway" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.ecommerce.api_gateway.ApiGatewayApplication" />
+      <module name="api-gateway" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f0a8a083-2295-42ae-a32d-7ad1a8cdcecf" name="Changes" comment="" />
+      <created>1776790745055</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776790745055</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

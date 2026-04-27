@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { fetchWithAuth } from "../utils/api";
+import { API_BASE_URL, fetchWithAuth } from "../utils/api";
 
 const Navbar = () => {
 
@@ -12,7 +12,7 @@ const Navbar = () => {
             return;
         }
 
-        fetchWithAuth("http://localhost:8081/api/cart")
+        fetchWithAuth(`${API_BASE_URL}/api/cart`)
             .then(res => {
                 if (!res.ok) {
                     if (res.status === 401) {

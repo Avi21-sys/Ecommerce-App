@@ -4,6 +4,8 @@ import com.ecommerce.order_service.dto.OrderDto;
 import com.ecommerce.order_service.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/orders")
 public class OrderController {
@@ -15,7 +17,12 @@ public class OrderController {
     }
 
     @PostMapping
-    public OrderDto placeOrder(@RequestBody OrderDto dto){
-        return service.placeOrder(dto);
+    public OrderDto placeOrder(@RequestBody OrderDto dto, @RequestHeader("X-User-Id") Long userId){
+        return service.placeOrder(dto, userId);
+    }
+
+    @GetMapping
+    public List<OrderDto> getOrders(@RequestHeader("X-User-Id") Long userId){
+        return service.getOrders(userId);
     }
 }
