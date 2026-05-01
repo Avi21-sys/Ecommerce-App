@@ -1,4 +1,4 @@
-export const API_BASE_URL = "http://localhost:8084";
+export const API_BASE_URL = "";
 
 export const fetchWithAuth = (url, options = {}) => {
     const token = localStorage.getItem("token");

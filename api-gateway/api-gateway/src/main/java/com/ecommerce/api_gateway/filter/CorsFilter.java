@@ -6,11 +6,11 @@ import org.springframework.core.Ordered;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Component;
+// Note: this class is intentionally not a Spring bean to avoid duplicating CORS headers.
+// If you need to enable programmatic CORS handling, re-add the @Component annotation.
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
-@Component
 public class CorsFilter implements GlobalFilter, Ordered {
 
     private static final String ALLOWED_ORIGIN = "http://localhost:5173";

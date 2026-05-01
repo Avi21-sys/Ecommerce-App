@@ -33,9 +33,14 @@ public class ProductController {
         return service.getByCategory(category);
     }
 
+    @GetMapping("/{id}")
+    public ProductDto getProduct(@PathVariable Long id){
+        return service.getProduct(id);
+    }
+
     @PostMapping
     public ProductDto addProduct(@RequestBody ProductDto dto){
-        return service.save(dto);
+        return service.createProduct(dto);
     }
 
     @GetMapping("/filter")
@@ -43,8 +48,10 @@ public class ProductController {
             @RequestParam int page,
             @RequestParam int size,
             @RequestParam(required = false) String keyword,
-            @RequestParam(required = false) String category){
-        return service.filterProducts(page, size, keyword, category);
+            @RequestParam(required = false) String category,
+            @RequestParam(required = false) String sortBy,
+            @RequestParam(required = false) String sortDir){
+        return service.filterProducts(page, size, keyword, category, sortBy, sortDir);
     }
 
     @GetMapping("/page")

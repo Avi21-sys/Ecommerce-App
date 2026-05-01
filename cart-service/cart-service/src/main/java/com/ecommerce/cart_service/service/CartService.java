@@ -2,6 +2,7 @@ package com.ecommerce.cart_service.service;
 
 import com.ecommerce.cart_service.dto.CartItemDto;
 import com.ecommerce.cart_service.entity.CartItem;
+import com.ecommerce.cart_service.exception.CartNotFoundException;
 import com.ecommerce.cart_service.repository.CartRepository;
 import org.springframework.stereotype.Service;
 
@@ -62,10 +63,10 @@ public class CartService {
 
     public void remove(Long id, Long userId){
         CartItem item = repo.findById(id)
-                .orElseThrow(() -> new RuntimeException("Item not found"));
+                .orElseThrow(() -> new CartNotFoundException("Cart item with id " + id + " not found"));
 
         if (!item.getUserId().equals(userId)) {
-            throw new RuntimeException("Unauthorized");
+            throw new CartNotFoundException("Unauthorized: Cart item does not belong to user " + userId);
         }
 
         repo.deleteById(id);

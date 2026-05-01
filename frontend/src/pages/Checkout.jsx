@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { API_BASE_URL, fetchWithAuth } from "../utils/api";
+import { triggerCartUpdate } from "../context/CartContext";
 
 const Checkout = () => {
 
@@ -52,6 +53,8 @@ const Checkout = () => {
                 )
             );
 
+            setCart([]);
+            triggerCartUpdate();
             alert("Order placed successfully!");
         }
         catch (err) {

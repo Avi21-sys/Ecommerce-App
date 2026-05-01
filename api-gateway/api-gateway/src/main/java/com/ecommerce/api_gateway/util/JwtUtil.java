@@ -35,7 +35,8 @@ public class JwtUtil {
                 .parseClaimsJws(token)
                 .getBody();
 
-        return claims.get("userId").toString();
+        Number userId = claims.get("userId", Number.class);
+        return userId == null ? null : userId.toString();
     }
 
     public String extractUsername(String token){

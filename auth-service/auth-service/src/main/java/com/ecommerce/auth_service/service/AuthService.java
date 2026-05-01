@@ -2,6 +2,8 @@ package com.ecommerce.auth_service.service;
 
 import com.ecommerce.auth_service.dto.LoginResponse;
 import com.ecommerce.auth_service.entity.User;
+import com.ecommerce.auth_service.exception.InvalidCredentialsException;
+import com.ecommerce.auth_service.exception.UsernameAlreadyExistsException;
 import com.ecommerce.auth_service.repository.UserRepository;
 import com.ecommerce.auth_service.security.JwtUtil;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -28,14 +30,14 @@ public class AuthService {
             return new LoginResponse(token, username);
         }
 
-        throw new RuntimeException("Invalid Credentials");
+        throw new InvalidCredentialsException("Invalid Credentials");
     }
 
     public LoginResponse register(String username, String password){
         User existing = repo.findByUsername(username);
 
         if (existing != null) {
-            throw new RuntimeException("Username already exists");
+            throw new UsernameAlreadyExistsException("Username already exists");
         }
 
         String encodedPassword = encoder.encode(password);
