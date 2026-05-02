@@ -6,16 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f0a8a083-2295-42ae-a32d-7ad1a8cdcecf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../auth-service/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-service/auth-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../auth-service/auth-service/src/main/java/com/ecommerce/auth_service/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-service/auth-service/src/main/java/com/ecommerce/auth_service/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../auth-service/auth-service/src/main/java/com/ecommerce/auth_service/dto/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-service/auth-service/src/main/java/com/ecommerce/auth_service/dto/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../auth-service/auth-service/src/main/java/com/ecommerce/auth_service/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-service/auth-service/src/main/java/com/ecommerce/auth_service/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/dto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/dto/OrderDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/dto/OrderItemDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/order-service/src/main/java/com/ecommerce/order_service/dto/OrderItemDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../product-service/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../product-service/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../product-service/product-service/src/main/java/com/ecommerce/product_service/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product-service/product-service/src/main/java/com/ecommerce/product_service/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../product-service/product-service/src/main/java/com/ecommerce/product_service/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product-service/product-service/src/main/java/com/ecommerce/product_service/dto/ProductDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cart-service/cart-service/src/main/java/com/ecommerce/cart_service/entity/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cart-service/cart-service/src/main/java/com/ecommerce/cart_service/entity/CartItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
