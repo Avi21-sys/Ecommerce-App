@@ -2,6 +2,7 @@ package com.ecommerce.order_service.controller;
 
 import com.ecommerce.order_service.dto.OrderDto;
 import com.ecommerce.order_service.service.OrderService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class OrderController {
      * Place a new order
      */
     @PostMapping
-    public OrderDto placeOrder(@RequestBody OrderDto dto, @RequestHeader("X-User-Id") Long userId){
+    public OrderDto placeOrder(@Valid @RequestBody OrderDto dto, @RequestHeader("X-User-Id") Long userId){
         return service.placeOrder(dto, userId);
     }
 
@@ -48,4 +49,3 @@ public class OrderController {
         service.cancelOrder(orderId, userId);
     }
 }
-

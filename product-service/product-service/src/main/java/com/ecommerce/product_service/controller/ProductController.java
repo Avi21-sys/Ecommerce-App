@@ -6,6 +6,7 @@ import com.ecommerce.product_service.service.ProductService;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
+import jakarta.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -39,7 +40,7 @@ public class ProductController {
     }
 
     @PostMapping
-    public ProductDto addProduct(@RequestBody ProductDto dto){
+    public ProductDto addProduct(@Valid @RequestBody ProductDto dto){
         return service.createProduct(dto);
     }
 

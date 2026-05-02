@@ -4,6 +4,7 @@ import com.ecommerce.auth_service.dto.LoginRequest;
 import com.ecommerce.auth_service.dto.LoginResponse;
 import com.ecommerce.auth_service.service.AuthService;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -17,12 +18,12 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public LoginResponse login(@RequestBody LoginRequest req){
+    public LoginResponse login(@Valid @RequestBody LoginRequest req){
         return service.login(req.getUsername(), req.getPassword());
     }
 
     @PostMapping("/register")
-    public LoginResponse register(@RequestBody LoginRequest req){
+    public LoginResponse register(@Valid @RequestBody LoginRequest req){
         return service.register(req.getUsername(), req.getPassword());
     }
 }
