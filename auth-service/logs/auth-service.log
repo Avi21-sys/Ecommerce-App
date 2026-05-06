@@ -171,3 +171,12 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2026-05-06T18:15:17.662+05:30 DEBUG 4728 --- [auth-service] [http-nio-8083-exec-7] c.e.auth_service.service.AuthService     : User found and password matched for username: naman
 2026-05-06T18:15:17.679+05:30  INFO 4728 --- [auth-service] [http-nio-8083-exec-7] c.e.auth_service.service.AuthService     : JWT token generated successfully for username: naman
 2026-05-06T18:15:17.679+05:30  INFO 4728 --- [auth-service] [http-nio-8083-exec-7] c.e.a.controller.AuthController          : Login successful for username: naman
+2026-05-06T19:21:14.265+05:30  WARN 4728 --- [auth-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s877ms983µs200ns).
+2026-05-06T19:41:15.386+05:30  WARN 4728 --- [auth-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s513ms272µs100ns).
+2026-05-06T20:59:44.093+05:30  WARN 4728 --- [auth-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h18m31s70ms72µs600ns).
+2026-05-06T21:24:07.260+05:30  INFO 4728 --- [auth-service] [http-nio-8083-exec-5] c.e.a.controller.AuthController          : Registration attempt for username: hodor
+2026-05-06T21:24:07.271+05:30 DEBUG 4728 --- [auth-service] [http-nio-8083-exec-5] c.e.auth_service.service.AuthService     : Attempting to register user: hodor
+2026-05-06T21:24:07.364+05:30 DEBUG 4728 --- [auth-service] [http-nio-8083-exec-5] c.e.auth_service.service.AuthService     : Username hodor is available, proceeding with registration
+2026-05-06T21:24:07.534+05:30 DEBUG 4728 --- [auth-service] [http-nio-8083-exec-5] c.e.auth_service.service.AuthService     : User saved to database with ID: 7
+2026-05-06T21:24:07.541+05:30  INFO 4728 --- [auth-service] [http-nio-8083-exec-5] c.e.auth_service.service.AuthService     : New user registered successfully with username: hodor
+2026-05-06T21:24:07.541+05:30  INFO 4728 --- [auth-service] [http-nio-8083-exec-5] c.e.a.controller.AuthController          : Registration successful for username: hodor

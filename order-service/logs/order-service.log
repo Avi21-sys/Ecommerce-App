@@ -47,3 +47,28 @@ This generated password is for development use only. Your security configuration
 2026-05-06 18:15:32.580 [http-nio-8082-exec-1] INFO  c.e.o.service.OrderService - Order saved successfully with ID: 11 for user: 3
 2026-05-06 18:15:32.606 [http-nio-8082-exec-1] INFO  c.e.o.service.OrderService - Order placement completed. Order ID: 11, Total Amount: 7998.0, Item Count: 2
 2026-05-06 18:15:32.771 [http-nio-8082-exec-1] INFO  c.e.o.controller.OrderController - Order placed successfully. Order ID: 11, User ID: 3
+2026-05-06 18:52:34.685 [http-nio-8082-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/orders
+2026-05-06 18:52:34.748 [http-nio-8082-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/orders
+2026-05-06 18:52:34.842 [http-nio-8082-exec-5] INFO  c.e.order_service.security.JwtFilter - Successfully authenticated user: naman with ID: 3 for request: /api/orders
+2026-05-06 18:52:34.844 [http-nio-8082-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-05-06 18:52:34.997 [http-nio-8082-exec-5] INFO  c.e.o.controller.OrderController - Placing new order for user: 3 with total amount: 8999.0
+2026-05-06 18:52:34.999 [http-nio-8082-exec-5] INFO  c.e.o.service.OrderService - Validating order for user: 3 - all validations passed
+2026-05-06 18:52:34.999 [http-nio-8082-exec-5] INFO  c.e.o.service.OrderService - Processing payment for user: 3 with amount: 8999.0
+2026-05-06 18:52:34.999 [http-nio-8082-exec-5] INFO  c.e.o.service.OrderService - Payment successful for user: 3
+2026-05-06 18:52:35.207 [http-nio-8082-exec-5] INFO  c.e.o.service.OrderService - Order saved successfully with ID: 12 for user: 3
+2026-05-06 18:52:35.219 [http-nio-8082-exec-5] INFO  c.e.o.service.OrderService - Order placement completed. Order ID: 12, Total Amount: 8999.0, Item Count: 1
+2026-05-06 18:52:35.291 [http-nio-8082-exec-5] INFO  c.e.o.controller.OrderController - Order placed successfully. Order ID: 12, User ID: 3
+2026-05-06 19:21:19.193 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s881ms887µs800ns).
+2026-05-06 19:41:20.278 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s509ms978µs500ns).
+2026-05-06 20:59:48.991 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h18m31s75ms249µs500ns).
+2026-05-06 21:24:22.259 [http-nio-8082-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/orders
+2026-05-06 21:24:22.298 [http-nio-8082-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/orders
+2026-05-06 21:24:22.365 [http-nio-8082-exec-3] INFO  c.e.order_service.security.JwtFilter - Successfully authenticated user: hodor with ID: 7 for request: /api/orders
+2026-05-06 21:24:22.368 [http-nio-8082-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-05-06 21:24:22.649 [http-nio-8082-exec-3] INFO  c.e.o.controller.OrderController - Placing new order for user: 7 with total amount: 6999.0
+2026-05-06 21:24:22.651 [http-nio-8082-exec-3] INFO  c.e.o.service.OrderService - Validating order for user: 7 - all validations passed
+2026-05-06 21:24:22.651 [http-nio-8082-exec-3] INFO  c.e.o.service.OrderService - Processing payment for user: 7 with amount: 6999.0
+2026-05-06 21:24:22.651 [http-nio-8082-exec-3] INFO  c.e.o.service.OrderService - Payment successful for user: 7
+2026-05-06 21:24:22.845 [http-nio-8082-exec-3] INFO  c.e.o.service.OrderService - Order saved successfully with ID: 13 for user: 7
+2026-05-06 21:24:22.861 [http-nio-8082-exec-3] INFO  c.e.o.service.OrderService - Order placement completed. Order ID: 13, Total Amount: 6999.0, Item Count: 1
+2026-05-06 21:24:22.926 [http-nio-8082-exec-3] INFO  c.e.o.controller.OrderController - Order placed successfully. Order ID: 13, User ID: 7

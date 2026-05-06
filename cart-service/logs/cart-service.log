@@ -211,3 +211,77 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2026-05-06 18:15:36 [http-nio-8081-exec-1] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
 2026-05-06 18:15:36 [http-nio-8081-exec-1] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 3
 2026-05-06 18:15:36 [http-nio-8081-exec-1] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 0 items for user: 3
+2026-05-06 18:51:11 [http-nio-8081-exec-4] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:51:11 [http-nio-8081-exec-4] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 3
+2026-05-06 18:51:12 [http-nio-8081-exec-4] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 0 items for user: 3
+2026-05-06 18:52:20 [http-nio-8081-exec-6] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:52:20 [http-nio-8081-exec-6] INFO  c.e.c.controller.CartController - POST request: Adding product 3 to cart for user 3
+2026-05-06 18:52:20 [http-nio-8081-exec-6] INFO  c.e.cart_service.service.CartService - Successfully added new item to cart. CartItemId: 37, ProductId: 3, UserId: 3
+2026-05-06 18:52:20 [http-nio-8081-exec-6] INFO  c.e.c.controller.CartController - Successfully added product to cart. Cart item ID: 37
+2026-05-06 18:52:20 [http-nio-8081-exec-7] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:52:20 [http-nio-8081-exec-7] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 3
+2026-05-06 18:52:20 [http-nio-8081-exec-7] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 1 items for user: 3
+2026-05-06 18:52:22 [http-nio-8081-exec-9] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:52:22 [http-nio-8081-exec-9] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 3
+2026-05-06 18:52:22 [http-nio-8081-exec-9] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 1 items for user: 3
+2026-05-06 18:52:31 [http-nio-8081-exec-8] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:52:31 [http-nio-8081-exec-8] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 3
+2026-05-06 18:52:31 [http-nio-8081-exec-8] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 1 items for user: 3
+2026-05-06 18:52:35 [http-nio-8081-exec-10] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart/37
+2026-05-06 18:52:35 [http-nio-8081-exec-10] INFO  c.e.c.controller.CartController - DELETE request: Removing cart item 37 for user 3
+2026-05-06 18:52:35 [http-nio-8081-exec-10] INFO  c.e.cart_service.service.CartService - Successfully removed cart item 37 for user 3
+2026-05-06 18:52:35 [http-nio-8081-exec-10] INFO  c.e.c.controller.CartController - Successfully removed cart item 37 for user 3
+2026-05-06 18:52:35 [http-nio-8081-exec-1] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:52:35 [http-nio-8081-exec-1] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 3
+2026-05-06 18:52:35 [http-nio-8081-exec-1] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 0 items for user: 3
+2026-05-06 18:52:41 [http-nio-8081-exec-2] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:52:41 [http-nio-8081-exec-2] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 3
+2026-05-06 18:52:41 [http-nio-8081-exec-2] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 0 items for user: 3
+2026-05-06 19:41:15 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s517ms306µs600ns).
+2026-05-06 20:59:31 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h18m18s579ms177µs).
+2026-05-06 21:24:07 [http-nio-8081-exec-4] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: hodor, UserId: 7, Request: /api/cart
+2026-05-06 21:24:08 [http-nio-8081-exec-4] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 7
+2026-05-06 21:24:08 [http-nio-8081-exec-4] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 0 items for user: 7
+2026-05-06 21:24:17 [http-nio-8081-exec-5] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: hodor, UserId: 7, Request: /api/cart
+2026-05-06 21:24:17 [http-nio-8081-exec-5] INFO  c.e.c.controller.CartController - POST request: Adding product 7 to cart for user 7
+2026-05-06 21:24:17 [http-nio-8081-exec-5] INFO  c.e.cart_service.service.CartService - Successfully added new item to cart. CartItemId: 38, ProductId: 7, UserId: 7
+2026-05-06 21:24:17 [http-nio-8081-exec-5] INFO  c.e.c.controller.CartController - Successfully added product to cart. Cart item ID: 38
+2026-05-06 21:24:17 [http-nio-8081-exec-6] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: hodor, UserId: 7, Request: /api/cart
+2026-05-06 21:24:17 [http-nio-8081-exec-6] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 7
+2026-05-06 21:24:17 [http-nio-8081-exec-6] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 1 items for user: 7
+2026-05-06 21:24:19 [http-nio-8081-exec-7] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: hodor, UserId: 7, Request: /api/cart
+2026-05-06 21:24:19 [http-nio-8081-exec-7] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 7
+2026-05-06 21:24:19 [http-nio-8081-exec-7] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 1 items for user: 7
+2026-05-06 21:24:21 [http-nio-8081-exec-9] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: hodor, UserId: 7, Request: /api/cart
+2026-05-06 21:24:21 [http-nio-8081-exec-9] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 7
+2026-05-06 21:24:21 [http-nio-8081-exec-9] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 1 items for user: 7
+2026-05-06 21:24:23 [http-nio-8081-exec-8] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: hodor, UserId: 7, Request: /api/cart/38
+2026-05-06 21:24:23 [http-nio-8081-exec-8] INFO  c.e.c.controller.CartController - DELETE request: Removing cart item 38 for user 7
+2026-05-06 21:24:23 [http-nio-8081-exec-8] INFO  c.e.cart_service.service.CartService - Successfully removed cart item 38 for user 7
+2026-05-06 21:24:23 [http-nio-8081-exec-8] INFO  c.e.c.controller.CartController - Successfully removed cart item 38 for user 7
+2026-05-06 21:24:23 [http-nio-8081-exec-10] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: hodor, UserId: 7, Request: /api/cart
+2026-05-06 21:24:23 [http-nio-8081-exec-10] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 7
+2026-05-06 21:24:23 [http-nio-8081-exec-10] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 0 items for user: 7
+2026-05-06 21:24:37 [http-nio-8081-exec-1] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: hodor, UserId: 7, Request: /api/cart
+2026-05-06 21:24:37 [http-nio-8081-exec-1] INFO  c.e.c.controller.CartController - POST request: Adding product 2 to cart for user 7
+2026-05-06 21:24:37 [http-nio-8081-exec-1] INFO  c.e.cart_service.service.CartService - Successfully added new item to cart. CartItemId: 39, ProductId: 2, UserId: 7
+2026-05-06 21:24:37 [http-nio-8081-exec-1] INFO  c.e.c.controller.CartController - Successfully added product to cart. Cart item ID: 39
+2026-05-06 21:24:37 [http-nio-8081-exec-2] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: hodor, UserId: 7, Request: /api/cart
+2026-05-06 21:24:37 [http-nio-8081-exec-2] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 7
+2026-05-06 21:24:37 [http-nio-8081-exec-2] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 1 items for user: 7
+2026-05-06 21:24:39 [http-nio-8081-exec-3] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: hodor, UserId: 7, Request: /api/cart
+2026-05-06 21:24:39 [http-nio-8081-exec-3] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 7
+2026-05-06 21:24:39 [http-nio-8081-exec-3] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 1 items for user: 7
+2026-05-06 21:24:45 [http-nio-8081-exec-4] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: hodor, UserId: 7, Request: /api/cart/39
+2026-05-06 21:24:45 [http-nio-8081-exec-4] INFO  c.e.c.controller.CartController - DELETE request: Removing cart item 39 for user 7
+2026-05-06 21:24:45 [http-nio-8081-exec-4] INFO  c.e.cart_service.service.CartService - Successfully removed cart item 39 for user 7
+2026-05-06 21:24:45 [http-nio-8081-exec-4] INFO  c.e.c.controller.CartController - Successfully removed cart item 39 for user 7
+2026-05-06 21:24:45 [http-nio-8081-exec-5] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: hodor, UserId: 7, Request: /api/cart
+2026-05-06 21:24:45 [http-nio-8081-exec-5] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 7
+2026-05-06 21:24:45 [http-nio-8081-exec-5] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 0 items for user: 7
+2026-05-06 21:24:50 [http-nio-8081-exec-6] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: hodor, UserId: 7, Request: /api/cart
+2026-05-06 21:24:50 [http-nio-8081-exec-6] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 7
+2026-05-06 21:24:50 [http-nio-8081-exec-6] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 0 items for user: 7
+2026-05-06 21:25:00 [http-nio-8081-exec-7] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: hodor, UserId: 7, Request: /api/cart
+2026-05-06 21:25:00 [http-nio-8081-exec-7] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 7
+2026-05-06 21:25:00 [http-nio-8081-exec-7] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 0 items for user: 7

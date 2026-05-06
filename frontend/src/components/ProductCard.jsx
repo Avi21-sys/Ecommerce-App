@@ -1,59 +1,40 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { getProductMedia } from "../utils/productMedia";
 
-const ProductCard = ({product}) => {
+const formatPrice = (value) =>
+    new Intl.NumberFormat("en-IN", {
+        style: "currency",
+        currency: "INR",
+        maximumFractionDigits: 0
+    }).format(value);
+
+const ProductCard = ({ product }) => {
     const { addToCart } = useContext(CartContext);
+    const { image, label } = getProductMedia(product);
 
     return (
-        <div style={{
-            borderRadius: "12px",
-            background: "#fff",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
-            overflow: "hidden",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            height: "100%",
-            transition: "0.3s"
-            }}
-            onMouseEnter={e => e.currentTarget.style.transform = "translateY(-5px)"}
-            onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
-        >
-            <img src={product.image} alt={product.name}
-            style={{
-                width: "100%",
-                height: "180px",
-                objectFit: "cover"
-            }}/>
-
-            <div style={{
-                padding: "15px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "8px",
-                flexGrow: 1
-                }}>
-                <h3 style={{ margin: 0 }}>{product.name}</h3>
-                <p style={{ margin: 0, color: "#666" }}>₹{product.price}</p>
+        <article className="product-card">
+            <div className="product-card__media">
+                <img src={image} alt={product.name} className="product-card__image" />
+                <span className="product-card__label">{label}</span>
             </div>
 
-            <div style={{ padding: "15px" }}>
-                <button 
-                onClick={() => addToCart(product)}
-                style={{
-                    width: "100%",
-                    padding: "10px",
-                    background: "#111",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: "6px",
-                    cursor: "pointer"
-                    }}>
-                    Add To Cart
-                </button>
+            <div className="product-card__body">
+                <div className="product-card__copy">
+                    <h3 className="product-card__title">{product.name}</h3>
+                    <p className="product-card__subtitle">Handpicked for everyday rotation</p>
+                </div>
+
+                <div className="product-card__footer">
+                    <p className="product-card__price">{formatPrice(product.price)}</p>
+                    <button onClick={() => addToCart(product)} className="button button--primary button--full">
+                        Add to cart
+                    </button>
+                </div>
             </div>
-        </div>
-    )
+        </article>
+    );
 };
 
 export default ProductCard;

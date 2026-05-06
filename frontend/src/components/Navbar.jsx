@@ -6,14 +6,15 @@ import { CartContext } from "../context/CartContext";
 const Navbar = () => {
     const [cartCount, setCartCount] = useState(0);
     const navigate = useNavigate();
-    const { cart } = useContext(CartContext);
+    useContext(CartContext);
 
     const isLoggedIn = hasValidSession();
 
     const fetchCartCount = () => {
         if (!isLoggedIn) return;
+
         fetchWithAuth(`${API_BASE_URL}/api/cart`)
-            .then(res => {
+            .then((res) => {
                 if (res.status === 401 || res.status === 403) {
                     localStorage.removeItem("token");
                     throw new Error("Session expired. Please login again.");
@@ -21,11 +22,11 @@ const Navbar = () => {
                 if (!res.ok) throw new Error(`Cart request failed with status ${res.status}`);
                 return res.json();
             })
-            .then(data => {
+            .then((data) => {
                 const count = data.reduce((sum, item) => sum + item.quantity, 0);
                 setCartCount(count);
             })
-            .catch(err => {
+            .catch((err) => {
                 console.error(err);
                 setCartCount(0);
             });
@@ -33,7 +34,6 @@ const Navbar = () => {
 
     useEffect(() => {
         fetchCartCount();
-        // Re-fetch if cart updates
         window.addEventListener("cart-updated", fetchCartCount);
         return () => window.removeEventListener("cart-updated", fetchCartCount);
     }, [isLoggedIn]);
@@ -45,29 +45,28 @@ const Navbar = () => {
     };
 
     return (
-        <nav style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "10px 20px",
-            background: "#333",
-            color: "#fff"
-        }}>
-            <div>
-                <Link to="/" style={{ color: "#fff", textDecoration: "none", marginRight: "20px" }}>Home</Link>
+        <nav className="navbar">
+            <div className="navbar__brand-group">
+                <Link to="/" className="navbar__brand">ModeMint</Link>
+                <span className="navbar__tag">Fresh edits, ready to wear</span>
+            </div>
+
+            <div className="navbar__links">
+                <Link to="/" className="navbar__link">Home</Link>
                 {isLoggedIn && (
-                    <Link to="/cart" style={{ color: "#fff", textDecoration: "none" }}>
-                        Cart ({cartCount})
+                    <Link to="/cart" className="navbar__link navbar__cart-link">
+                        Cart <span className="navbar__badge">{cartCount}</span>
                     </Link>
                 )}
             </div>
-            <div>
+
+            <div className="navbar__actions">
                 {isLoggedIn ? (
-                    <button onClick={handleLogout} style={{ background: "none", color: "#fff", border: "none", cursor: "pointer" }}>
+                    <button onClick={handleLogout} className="button button--ghost">
                         Logout
                     </button>
                 ) : (
-                    <Link to="/login" style={{ color: "#fff", textDecoration: "none" }}>Login</Link>
+                    <Link to="/login" className="button button--primary">Login</Link>
                 )}
             </div>
         </nav>
