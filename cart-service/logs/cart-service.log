@@ -1,0 +1,213 @@
+2026-05-06 18:01:48 [restartedMain] INFO  c.e.c.CartServiceApplication - Starting CartServiceApplication using Java 21.0.9 with PID 28400 (D:\ECommerce\ecommerce-app\cart-service\cart-service\target\classes started by DEV SANGAL in D:\ECommerce\ecommerce-app\cart-service)
+2026-05-06 18:01:48 [restartedMain] DEBUG c.e.c.CartServiceApplication - Running with Spring Boot v3.5.13, Spring v6.2.17
+2026-05-06 18:01:48 [restartedMain] INFO  c.e.c.CartServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-06 18:01:48 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-06 18:01:48 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-06 18:01:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-06 18:01:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 207 ms. Found 1 JPA repository interface.
+2026-05-06 18:01:54 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-05-06 18:01:54 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-06 18:01:54 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-05-06 18:01:54 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-06 18:01:54 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5304 ms
+2026-05-06 18:01:56 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-06 18:01:56 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-06 18:01:57 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3feb8f85
+2026-05-06 18:01:57 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-06 18:01:57 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-06 18:01:59 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-06 18:02:00 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-06 18:02:00 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 1868f42d-ad25-4b84-b1b8-bb317cfa2ea4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-06 18:02:00 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-06 18:02:01 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-05-06 18:02:01 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-05-06 18:02:01 [restartedMain] INFO  c.e.c.CartServiceApplication - Started CartServiceApplication in 14.06 seconds (process running for 14.94)
+2026-05-06 18:09:02 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-06 18:09:02 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-06 18:09:02 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 97 ms
+2026-05-06 18:09:03 [http-nio-8081-exec-1] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 1
+2026-05-06 18:09:03 [http-nio-8081-exec-1] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 0 items for user: 1
+2026-05-06 18:09:39 [http-nio-8081-exec-3] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: codexdev2, UserId: 6, Request: /api/cart
+2026-05-06 18:09:39 [http-nio-8081-exec-3] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 6
+2026-05-06 18:09:39 [http-nio-8081-exec-3] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 0 items for user: 6
+2026-05-06 18:09:41 [http-nio-8081-exec-4] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: codexdev2, UserId: 6, Request: /api/cart
+2026-05-06 18:09:41 [http-nio-8081-exec-4] INFO  c.e.c.controller.CartController - POST request: Adding product 1 to cart for user 6
+2026-05-06 18:09:41 [http-nio-8081-exec-4] INFO  c.e.cart_service.service.CartService - Successfully added new item to cart. CartItemId: 33, ProductId: 1, UserId: 6
+2026-05-06 18:09:41 [http-nio-8081-exec-4] INFO  c.e.c.controller.CartController - Successfully added product to cart. Cart item ID: 33
+2026-05-06 18:09:47 [http-nio-8081-exec-5] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: codexdev2, UserId: 6, Request: /api/cart
+2026-05-06 18:09:47 [http-nio-8081-exec-5] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 6
+2026-05-06 18:09:47 [http-nio-8081-exec-5] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 1 items for user: 6
+2026-05-06 18:09:56 [http-nio-8081-exec-6] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: codexdev2, UserId: 6, Request: /api/cart
+2026-05-06 18:09:56 [http-nio-8081-exec-6] ERROR c.e.c.e.GlobalExceptionHandler - Unexpected exception occurred - Message: JSON parse error: Unexpected character ('\' (code 92)): was expecting double-quote to start field name, Path: /api/cart, Exception: org.springframework.http.converter.HttpMessageNotReadableException
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('\' (code 92)): was expecting double-quote to start field name
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:408)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:356)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:204)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:176)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:150)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at com.ecommerce.cart_service.security.JwtFilter.doFilter(JwtFilter.java:68)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1775)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('\' (code 92)): was expecting double-quote to start field name
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2675)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:743)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleOddName(UTF8StreamJsonParser.java:2148)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._parseName(UTF8StreamJsonParser.java:1753)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:757)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:173)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2148)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1504)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:397)
+	... 107 common frames omitted
+2026-05-06 18:09:56 [http-nio-8081-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('\' (code 92)): was expecting double-quote to start field name]
+2026-05-06 18:10:04 [http-nio-8081-exec-7] INFO  c.e.c.controller.CartController - POST request: Adding product 1 to cart for user 6
+2026-05-06 18:10:04 [http-nio-8081-exec-7] INFO  c.e.cart_service.service.CartService - Successfully updated cart item 33 for user 6
+2026-05-06 18:10:04 [http-nio-8081-exec-7] INFO  c.e.c.controller.CartController - Successfully added product to cart. Cart item ID: 33
+2026-05-06 18:10:15 [http-nio-8081-exec-9] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: codexdev2, UserId: 6, Request: /api/cart
+2026-05-06 18:10:15 [http-nio-8081-exec-9] INFO  c.e.c.controller.CartController - POST request: Adding product 2 to cart for user 6
+2026-05-06 18:10:15 [http-nio-8081-exec-9] INFO  c.e.cart_service.service.CartService - Successfully added new item to cart. CartItemId: 34, ProductId: 2, UserId: 6
+2026-05-06 18:10:15 [http-nio-8081-exec-9] INFO  c.e.c.controller.CartController - Successfully added product to cart. Cart item ID: 34
+2026-05-06 18:15:19 [http-nio-8081-exec-1] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:15:19 [http-nio-8081-exec-1] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 3
+2026-05-06 18:15:19 [http-nio-8081-exec-1] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 0 items for user: 3
+2026-05-06 18:15:22 [http-nio-8081-exec-2] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:15:22 [http-nio-8081-exec-2] INFO  c.e.c.controller.CartController - POST request: Adding product 1 to cart for user 3
+2026-05-06 18:15:22 [http-nio-8081-exec-2] INFO  c.e.cart_service.service.CartService - Successfully added new item to cart. CartItemId: 35, ProductId: 1, UserId: 3
+2026-05-06 18:15:22 [http-nio-8081-exec-2] INFO  c.e.c.controller.CartController - Successfully added product to cart. Cart item ID: 35
+2026-05-06 18:15:22 [http-nio-8081-exec-3] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:15:22 [http-nio-8081-exec-3] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 3
+2026-05-06 18:15:22 [http-nio-8081-exec-3] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 1 items for user: 3
+2026-05-06 18:15:22 [http-nio-8081-exec-4] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:15:22 [http-nio-8081-exec-4] INFO  c.e.c.controller.CartController - POST request: Adding product 2 to cart for user 3
+2026-05-06 18:15:22 [http-nio-8081-exec-4] INFO  c.e.cart_service.service.CartService - Successfully added new item to cart. CartItemId: 36, ProductId: 2, UserId: 3
+2026-05-06 18:15:22 [http-nio-8081-exec-4] INFO  c.e.c.controller.CartController - Successfully added product to cart. Cart item ID: 36
+2026-05-06 18:15:22 [http-nio-8081-exec-5] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:15:22 [http-nio-8081-exec-5] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 3
+2026-05-06 18:15:22 [http-nio-8081-exec-5] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 2 items for user: 3
+2026-05-06 18:15:24 [http-nio-8081-exec-6] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:15:24 [http-nio-8081-exec-6] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 3
+2026-05-06 18:15:24 [http-nio-8081-exec-6] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 2 items for user: 3
+2026-05-06 18:15:27 [http-nio-8081-exec-7] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:15:27 [http-nio-8081-exec-7] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 3
+2026-05-06 18:15:27 [http-nio-8081-exec-7] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 2 items for user: 3
+2026-05-06 18:15:32 [http-nio-8081-exec-8] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart/36
+2026-05-06 18:15:32 [http-nio-8081-exec-9] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart/35
+2026-05-06 18:15:32 [http-nio-8081-exec-9] INFO  c.e.c.controller.CartController - DELETE request: Removing cart item 35 for user 3
+2026-05-06 18:15:32 [http-nio-8081-exec-8] INFO  c.e.c.controller.CartController - DELETE request: Removing cart item 36 for user 3
+2026-05-06 18:15:33 [http-nio-8081-exec-8] INFO  c.e.cart_service.service.CartService - Successfully removed cart item 36 for user 3
+2026-05-06 18:15:33 [http-nio-8081-exec-9] INFO  c.e.cart_service.service.CartService - Successfully removed cart item 35 for user 3
+2026-05-06 18:15:33 [http-nio-8081-exec-8] INFO  c.e.c.controller.CartController - Successfully removed cart item 36 for user 3
+2026-05-06 18:15:33 [http-nio-8081-exec-9] INFO  c.e.c.controller.CartController - Successfully removed cart item 35 for user 3
+2026-05-06 18:15:33 [http-nio-8081-exec-10] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:15:33 [http-nio-8081-exec-10] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 3
+2026-05-06 18:15:33 [http-nio-8081-exec-10] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 0 items for user: 3
+2026-05-06 18:15:36 [http-nio-8081-exec-1] INFO  c.e.cart_service.security.JwtFilter - JWT token validated successfully - Username: naman, UserId: 3, Request: /api/cart
+2026-05-06 18:15:36 [http-nio-8081-exec-1] INFO  c.e.c.controller.CartController - GET request: Fetching cart for user with ID: 3
+2026-05-06 18:15:36 [http-nio-8081-exec-1] INFO  c.e.cart_service.service.CartService - Cart fetch successful. Found 0 items for user: 3

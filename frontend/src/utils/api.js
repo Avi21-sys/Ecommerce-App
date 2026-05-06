@@ -1,16 +1,52 @@
 export const API_BASE_URL = "";
 
-export const fetchWithAuth = (url, options = {}) => {
+const decodeTokenPayload = (token) => {
+    try {
+        const [, payload] = token.split(".");
+        if (!payload) return null;
+
+        const normalized = payload.replace(/-/g, "+").replace(/_/g, "/");
+        const padded = normalized.padEnd(Math.ceil(normalized.length / 4) * 4, "=");
+        return JSON.parse(window.atob(padded));
+    } catch (err) {
+        console.error("Failed to decode token payload", err);
+        return null;
+    }
+};
+
+export const getValidToken = () => {
     const token = localStorage.getItem("token");
+    if (!token || token.split(".").length !== 3) {
+        localStorage.removeItem("token");
+        return null;
+    }
+
+    const payload = decodeTokenPayload(token);
+    if (!payload || !payload.userId) {
+        localStorage.removeItem("token");
+        return null;
+    }
+
+    const now = Math.floor(Date.now() / 1000);
+    if (payload.exp && payload.exp <= now) {
+        localStorage.removeItem("token");
+        return null;
+    }
+
+    return token;
+};
+
+export const isLoggedIn = () => !!getValidToken();
+
+export const fetchWithAuth = (url, options = {}) => {
+    const token = getValidToken();
     const headers = {
-        "Content-Type" : "application/json",
+        "Content-Type": "application/json",
         ...(options.headers || {})
     };
 
-    if (token && token.split(".").length === 3) {
+    if (token) {
         headers.Authorization = `Bearer ${token}`;
-    } else if (token) {
-        localStorage.removeItem("token");
     }
 
     return fetch(url, {

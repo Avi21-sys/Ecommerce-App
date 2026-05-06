@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { API_BASE_URL, fetchWithAuth } from "../utils/api";
+import { API_BASE_URL, fetchWithAuth, getValidToken } from "../utils/api";
 
 export const CartContext = createContext();
 
@@ -13,7 +13,7 @@ const CartProvider = ({ children }) => {
 
     const addToCart = async (product) => {
         try {
-            if (!localStorage.getItem("token")) {
+            if (!getValidToken()) {
                 alert("Please login to add items to cart");
                 window.location.href = "/login";
                 return;
@@ -29,6 +29,13 @@ const CartProvider = ({ children }) => {
                     quantity: 1
                 })
             });
+
+            if (res.status === 401 || res.status === 403) {
+                localStorage.removeItem("token");
+                alert("Session expired. Please login again");
+                window.location.href = "/login";
+                return;
+            }
 
             if (!res.ok) throw new Error(`Add to cart failed with status ${res.status}`);
 

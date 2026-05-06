@@ -24,14 +24,17 @@ public class JwtFilter implements GlobalFilter {
         HttpMethod method = exchange.getRequest().getMethod();
 
         if (HttpMethod.OPTIONS.equals(method)) {
+            log.debug("OPTIONS request - skipping auth filter for path={}", path);
             return chain.filter(exchange);
         }
 
         if (path.startsWith("/api/auth/")) {
+            log.debug("Auth path - skipping auth filter for path={}", path);
             return chain.filter(exchange);
         }
 
         if (HttpMethod.GET.equals(method) && path.startsWith("/api/products/")) {
+            log.debug("Public products GET - skipping auth for path={}", path);
             return chain.filter(exchange);
         }
 
@@ -59,15 +62,16 @@ public class JwtFilter implements GlobalFilter {
                 exchange.getResponse().setStatusCode(org.springframework.http.HttpStatus.UNAUTHORIZED);
                 return exchange.getResponse().setComplete();
             }
-
             String username = jwtUtil.extractUsername(token);
 
             // Add userId to request header for downstream services
             ServerWebExchange modifiedExchange = exchange.mutate()
                     .request(r -> r
                             .header("X-User-Id", userId)
-                            .header("X-Username", username))
+                            .header("X-Username", username == null ? "" : username))
                     .build();
+
+            log.info("Authenticated request to {} for userId={} username={}", path, userId, username);
 
             return chain.filter(modifiedExchange);
         } catch (Exception e) {

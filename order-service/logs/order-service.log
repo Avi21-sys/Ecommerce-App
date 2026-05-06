@@ -1,0 +1,49 @@
+2026-05-06 18:02:09.166 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-05-06 18:02:09.263 [restartedMain] INFO  c.e.o.OrderServiceApplication - Starting OrderServiceApplication using Java 21.0.9 with PID 17876 (D:\ECommerce\ecommerce-app\order-service\order-service\target\classes started by DEV SANGAL in D:\ECommerce\ecommerce-app\order-service)
+2026-05-06 18:02:09.265 [restartedMain] INFO  c.e.o.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-06 18:02:14.120 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-05-06 18:02:14.126 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-06 18:02:14.127 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-05-06 18:02:14.255 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-06 18:02:15.299 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-06 18:02:15.487 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.45.Final
+2026-05-06 18:02:15.728 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-06 18:02:16.328 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-06 18:02:17.126 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2472b619
+2026-05-06 18:02:17.129 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-06 18:02:17.304 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-06 18:02:17.364 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-06 18:02:18.595 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-06 18:02:19.263 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-06 18:02:19.461 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 1c4debb1-135b-4a91-a114-4c07fdefffb8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-06 18:02:19.522 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-06 18:02:19.760 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-05-06 18:02:22.259 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-05-06 18:02:22.287 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2026-05-06 18:02:22.377 [restartedMain] INFO  c.e.o.OrderServiceApplication - Started OrderServiceApplication in 14.179 seconds (process running for 15.129)
+2026-05-06 18:15:31.010 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-06 18:15:31.022 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-06 18:15:31.099 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 76 ms
+2026-05-06 18:15:31.221 [http-nio-8082-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/orders
+2026-05-06 18:15:31.320 [http-nio-8082-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/orders
+2026-05-06 18:15:31.586 [http-nio-8082-exec-1] INFO  c.e.order_service.security.JwtFilter - Successfully authenticated user: naman with ID: 3 for request: /api/orders
+2026-05-06 18:15:31.593 [http-nio-8082-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-05-06 18:15:32.208 [http-nio-8082-exec-1] INFO  c.e.o.controller.OrderController - Placing new order for user: 3 with total amount: 7998.0
+2026-05-06 18:15:32.210 [http-nio-8082-exec-1] INFO  c.e.o.service.OrderService - Validating order for user: 3 - all validations passed
+2026-05-06 18:15:32.210 [http-nio-8082-exec-1] INFO  c.e.o.service.OrderService - Processing payment for user: 3 with amount: 7998.0
+2026-05-06 18:15:32.210 [http-nio-8082-exec-1] INFO  c.e.o.service.OrderService - Payment successful for user: 3
+2026-05-06 18:15:32.580 [http-nio-8082-exec-1] INFO  c.e.o.service.OrderService - Order saved successfully with ID: 11 for user: 3
+2026-05-06 18:15:32.606 [http-nio-8082-exec-1] INFO  c.e.o.service.OrderService - Order placement completed. Order ID: 11, Total Amount: 7998.0, Item Count: 2
+2026-05-06 18:15:32.771 [http-nio-8082-exec-1] INFO  c.e.o.controller.OrderController - Order placed successfully. Order ID: 11, User ID: 3

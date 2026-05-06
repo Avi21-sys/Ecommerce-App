@@ -6,6 +6,8 @@ import org.springframework.core.Ordered;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 // Note: this class is intentionally not a Spring bean to avoid duplicating CORS headers.
 // If you need to enable programmatic CORS handling, re-add the @Component annotation.
 import org.springframework.web.server.ServerWebExchange;
@@ -14,12 +16,17 @@ import reactor.core.publisher.Mono;
 public class CorsFilter implements GlobalFilter, Ordered {
 
     private static final String ALLOWED_ORIGIN = "http://localhost:5173";
+    private static final Logger log = LoggerFactory.getLogger(CorsFilter.class);
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         String origin = exchange.getRequest().getHeaders().getOrigin();
+        String path = exchange.getRequest().getURI().getPath();
+
+        log.debug("CORS check for path={} origin={}", path, origin);
 
         if (!ALLOWED_ORIGIN.equals(origin)) {
+            log.debug("Origin {} not allowed for path={}", origin, path);
             return chain.filter(exchange);
         }
 
@@ -31,10 +38,12 @@ public class CorsFilter implements GlobalFilter, Ordered {
             headers.set("Access-Control-Allow-Headers", "*");
             headers.set("Access-Control-Expose-Headers", "Authorization, Content-Type, X-User-Id, X-Username");
             headers.set("Vary", "Origin");
+            log.debug("Added CORS response headers for origin={} path={}", origin, path);
             return Mono.empty();
         });
 
         if (HttpMethod.OPTIONS.equals(exchange.getRequest().getMethod())) {
+            log.debug("Responding to preflight OPTIONS for path={} origin={}", path, origin);
             exchange.getResponse().setStatusCode(HttpStatus.OK);
             return exchange.getResponse().setComplete();
         }

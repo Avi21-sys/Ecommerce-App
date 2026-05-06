@@ -2,6 +2,8 @@ package com.ecommerce.order_service.exception;
 
 import com.ecommerce.order_service.dto.ErrorResponse;
 import jakarta.servlet.http.HttpServletRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -19,6 +21,8 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
+    private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
+
     /**
      * Handle OrderNotFoundException - HTTP 404 Not Found
      */
@@ -26,6 +30,8 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleOrderNotFoundException(
             OrderNotFoundException ex,
             HttpServletRequest request) {
+        
+        logger.warn("OrderNotFoundException caught - Message: {}, Path: {}", ex.getMessage(), request.getRequestURI());
         
         ErrorResponse errorResponse = new ErrorResponse(
                 HttpStatus.NOT_FOUND.value(),
@@ -45,6 +51,8 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handlePaymentFailedException(
             PaymentFailedException ex,
             HttpServletRequest request) {
+        
+        logger.error("PaymentFailedException caught - Message: {}, Path: {}", ex.getMessage(), request.getRequestURI());
         
         HttpStatus status = HttpStatus.PAYMENT_REQUIRED;
         ErrorResponse errorResponse = new ErrorResponse(
@@ -66,6 +74,8 @@ public class GlobalExceptionHandler {
             MethodArgumentNotValidException ex,
             HttpServletRequest request) {
         
+        logger.warn("Validation exception caught - Path: {}", request.getRequestURI());
+        
         Map<String, Object> error = new HashMap<>();
         error.put("status", HttpStatus.BAD_REQUEST.value());
         error.put("timestamp", LocalDateTime.now());
@@ -77,8 +87,10 @@ public class GlobalExceptionHandler {
             if (err instanceof FieldError) {
                 FieldError field = (FieldError) err;
                 fieldErrors.put(field.getField(), field.getDefaultMessage());
+                logger.debug("Field validation error - Field: {}, Message: {}", field.getField(), field.getDefaultMessage());
             } else {
                 fieldErrors.put(err.getObjectName(), err.getDefaultMessage());
+                logger.debug("Object validation error - Object: {}, Message: {}", err.getObjectName(), err.getDefaultMessage());
             }
         });
         
@@ -94,6 +106,8 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleAuthenticationException(
             AuthenticationException ex,
             HttpServletRequest request) {
+        
+        logger.warn("AuthenticationException caught - Message: {}, Path: {}", ex.getMessage(), request.getRequestURI());
         
         ErrorResponse errorResponse = new ErrorResponse(
                 HttpStatus.UNAUTHORIZED.value(),
@@ -114,6 +128,8 @@ public class GlobalExceptionHandler {
             BadCredentialsException ex,
             HttpServletRequest request) {
         
+        logger.warn("BadCredentialsException caught - Path: {}", request.getRequestURI());
+        
         ErrorResponse errorResponse = new ErrorResponse(
                 HttpStatus.UNAUTHORIZED.value(),
                 "Invalid credentials",
@@ -132,6 +148,8 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleIllegalArgumentException(
             IllegalArgumentException ex,
             HttpServletRequest request) {
+        
+        logger.warn("IllegalArgumentException caught - Message: {}, Path: {}", ex.getMessage(), request.getRequestURI());
         
         ErrorResponse errorResponse = new ErrorResponse(
                 HttpStatus.BAD_REQUEST.value(),
@@ -152,6 +170,9 @@ public class GlobalExceptionHandler {
             Exception ex,
             HttpServletRequest request) {
         
+        logger.error("Unexpected exception caught - Type: {}, Message: {}, Path: {}", 
+            ex.getClass().getSimpleName(), ex.getMessage(), request.getRequestURI(), ex);
+        
         ErrorResponse errorResponse = new ErrorResponse(
                 HttpStatus.INTERNAL_SERVER_ERROR.value(),
                 "An unexpected error occurred. Please try again later.",
@@ -159,9 +180,6 @@ public class GlobalExceptionHandler {
                 request.getRequestURI(),
                 LocalDateTime.now()
         );
-        
-        // Log the exception for debugging
-        ex.printStackTrace();
         
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse);
     }

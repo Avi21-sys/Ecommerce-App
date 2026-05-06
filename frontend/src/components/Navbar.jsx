@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { API_BASE_URL, fetchWithAuth } from "../utils/api";
+import { API_BASE_URL, fetchWithAuth, isLoggedIn as hasValidSession } from "../utils/api";
 import { CartContext } from "../context/CartContext";
 
 const Navbar = () => {
@@ -8,12 +8,16 @@ const Navbar = () => {
     const navigate = useNavigate();
     const { cart } = useContext(CartContext);
 
-    const isLoggedIn = !!localStorage.getItem("token");
+    const isLoggedIn = hasValidSession();
 
     const fetchCartCount = () => {
         if (!isLoggedIn) return;
         fetchWithAuth(`${API_BASE_URL}/api/cart`)
             .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    localStorage.removeItem("token");
+                    throw new Error("Session expired. Please login again.");
+                }
                 if (!res.ok) throw new Error(`Cart request failed with status ${res.status}`);
                 return res.json();
             })
