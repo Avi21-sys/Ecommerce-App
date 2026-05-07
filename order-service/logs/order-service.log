@@ -72,3 +72,95 @@ This generated password is for development use only. Your security configuration
 2026-05-06 21:24:22.845 [http-nio-8082-exec-3] INFO  c.e.o.service.OrderService - Order saved successfully with ID: 13 for user: 7
 2026-05-06 21:24:22.861 [http-nio-8082-exec-3] INFO  c.e.o.service.OrderService - Order placement completed. Order ID: 13, Total Amount: 6999.0, Item Count: 1
 2026-05-06 21:24:22.926 [http-nio-8082-exec-3] INFO  c.e.o.controller.OrderController - Order placed successfully. Order ID: 13, User ID: 7
+2026-05-06 21:42:31.909 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+2026-05-06 21:42:40.459 [Thread-1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+2026-05-06 21:42:56.308 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-05-06 21:42:57.860 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-05-06 21:43:13.272 [restartedMain] INFO  c.e.o.OrderServiceApplication - Starting OrderServiceApplication using Java 21.0.9 with PID 17876 (D:\ECommerce\ecommerce-app\order-service\order-service\target\classes started by DEV SANGAL in D:\ECommerce\ecommerce-app\order-service)
+2026-05-06 21:43:13.281 [restartedMain] INFO  c.e.o.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-06 21:43:25.426 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-05-06 21:43:25.429 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-06 21:43:25.434 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-05-06 21:43:26.278 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-06 21:43:27.237 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-06 21:43:27.262 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-06 21:43:27.464 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-05-06 21:43:27.882 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18f20133
+2026-05-06 21:43:27.884 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-05-06 21:43:27.900 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-06 21:43:27.923 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-06 21:43:30.584 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-06 21:43:31.491 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-06 21:43:31.544 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 6a369597-6c5f-491b-9d24-c8d632c9f6de
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-06 21:43:31.548 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-06 21:43:31.592 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-05-06 21:43:33.069 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-05-06 21:43:33.109 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2026-05-06 21:43:33.166 [restartedMain] INFO  c.e.o.OrderServiceApplication - Started OrderServiceApplication in 24.817 seconds (process running for 13288.421)
+2026-05-06 21:58:29.780 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-05-06 21:58:29.885 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-05-06 21:58:42.909 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-05-06 21:58:43.015 [restartedMain] INFO  c.e.o.OrderServiceApplication - Starting OrderServiceApplication using Java 21.0.9 with PID 32120 (D:\ECommerce\ecommerce-app\order-service\order-service\target\classes started by DEV SANGAL in D:\ECommerce\ecommerce-app\order-service)
+2026-05-06 21:58:43.017 [restartedMain] INFO  c.e.o.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-06 21:58:47.127 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-05-06 21:58:47.131 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-06 21:58:47.132 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-05-06 21:58:47.235 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-06 21:58:47.929 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-06 21:58:48.052 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.45.Final
+2026-05-06 21:58:48.123 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-06 21:58:48.849 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-06 21:58:49.858 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1055d4a0
+2026-05-06 21:58:49.862 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-06 21:58:50.079 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-06 21:58:50.136 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-06 21:58:51.890 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-06 21:58:52.947 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-06 21:58:53.050 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 8eb19fca-f741-4524-9f79-e56c87c881da
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-06 21:58:53.130 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-06 21:58:53.450 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-05-06 21:58:55.185 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-05-06 21:58:55.211 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2026-05-06 21:58:55.319 [restartedMain] INFO  c.e.o.OrderServiceApplication - Started OrderServiceApplication in 13.733 seconds (process running for 14.777)
+2026-05-06 22:03:59.923 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m9s904ms904µs800ns).
+2026-05-06 22:13:05.152 [http-nio-8082-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-06 22:13:05.156 [http-nio-8082-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-06 22:13:05.220 [http-nio-8082-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 62 ms
+2026-05-06 22:13:05.287 [http-nio-8082-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/orders/admin/all
+2026-05-06 22:13:05.306 [http-nio-8082-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/orders/admin/all
+2026-05-06 22:13:05.492 [http-nio-8082-exec-3] INFO  c.e.order_service.security.JwtFilter - Successfully authenticated user: admin with ID: 1 for request: /api/orders/admin/all
+2026-05-06 22:13:05.494 [http-nio-8082-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-05-06 22:13:05.556 [http-nio-8082-exec-3] INFO  c.e.o.controller.OrderController - Fetching all orders for admin role: ADMIN
+2026-05-06 22:13:05.557 [http-nio-8082-exec-3] INFO  c.e.o.service.OrderService - Fetching all orders for admin view
+2026-05-06 22:17:01.203 [http-nio-8082-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/orders/admin/all
+2026-05-06 22:17:01.208 [http-nio-8082-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/orders/admin/all
+2026-05-06 22:17:01.225 [http-nio-8082-exec-7] INFO  c.e.order_service.security.JwtFilter - Successfully authenticated user: admin with ID: 1 for request: /api/orders/admin/all
+2026-05-06 22:17:01.225 [http-nio-8082-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-05-06 22:17:01.234 [http-nio-8082-exec-7] INFO  c.e.o.controller.OrderController - Fetching all orders for admin role: ADMIN
+2026-05-06 22:17:01.234 [http-nio-8082-exec-7] INFO  c.e.o.service.OrderService - Fetching all orders for admin view
+2026-05-06 22:31:17.322 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-05-06 22:31:17.381 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -180,3 +180,179 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2026-05-06T21:24:07.534+05:30 DEBUG 4728 --- [auth-service] [http-nio-8083-exec-5] c.e.auth_service.service.AuthService     : User saved to database with ID: 7
 2026-05-06T21:24:07.541+05:30  INFO 4728 --- [auth-service] [http-nio-8083-exec-5] c.e.auth_service.service.AuthService     : New user registered successfully with username: hodor
 2026-05-06T21:24:07.541+05:30  INFO 4728 --- [auth-service] [http-nio-8083-exec-5] c.e.a.controller.AuthController          : Registration successful for username: hodor
+2026-05-06T21:42:23.490+05:30  INFO 4728 --- [auth-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 14 class path changes (1 addition, 0 deletions, 13 modifications)
+2026-05-06T21:42:25.345+05:30  INFO 4728 --- [auth-service] [Thread-1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-06T21:42:26.081+05:30  INFO 4728 --- [auth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-06T21:42:27.030+05:30  INFO 4728 --- [auth-service] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-06T21:42:29.184+05:30  INFO 4728 --- [auth-service] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-06T21:42:30.146+05:30  INFO 4728 --- [auth-service] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-06T21:42:51.912+05:30  INFO 4728 --- [auth-service] [restartedMain] c.e.auth_service.AuthServiceApplication  : Starting AuthServiceApplication using Java 21.0.9 with PID 4728 (D:\ECommerce\ecommerce-app\auth-service\auth-service\target\classes started by DEV SANGAL in D:\ECommerce\ecommerce-app\auth-service)
+2026-05-06T21:42:51.941+05:30 DEBUG 4728 --- [auth-service] [restartedMain] c.e.auth_service.AuthServiceApplication  : Running with Spring Boot v3.5.13, Spring v6.2.17
+2026-05-06T21:42:51.943+05:30  INFO 4728 --- [auth-service] [restartedMain] c.e.auth_service.AuthServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-05-06T21:42:57.816+05:30  INFO 4728 --- [auth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-06T21:42:58.101+05:30  INFO 4728 --- [auth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 247 ms. Found 1 JPA repository interface.
+2026-05-06T21:43:03.903+05:30  INFO 4728 --- [auth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2026-05-06T21:43:03.922+05:30  INFO 4728 --- [auth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-06T21:43:03.923+05:30  INFO 4728 --- [auth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-05-06T21:43:06.564+05:30  INFO 4728 --- [auth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-06T21:43:06.564+05:30  INFO 4728 --- [auth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 14563 ms
+2026-05-06T21:43:07.182+05:30  INFO 4728 --- [auth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-06T21:43:07.217+05:30  INFO 4728 --- [auth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-06T21:43:07.539+05:30  INFO 4728 --- [auth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-06T21:43:07.564+05:30  INFO 4728 --- [auth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-05-06T21:43:07.835+05:30  INFO 4728 --- [auth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f8cf62d
+2026-05-06T21:43:07.866+05:30  INFO 4728 --- [auth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-05-06T21:43:07.914+05:30  INFO 4728 --- [auth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-06T21:43:09.395+05:30  INFO 4728 --- [auth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-06T21:43:09.526+05:30  INFO 4728 --- [auth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-06T21:43:09.935+05:30  WARN 4728 --- [auth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-06T21:43:09.957+05:30  WARN 4728 --- [auth-service] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1c2f2b52-1893-4939-9d0d-763ccc2ec4e8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-06T21:43:09.961+05:30  INFO 4728 --- [auth-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-06T21:43:12.292+05:30  WARN 4728 --- [auth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-05-06T21:43:16.234+05:30  INFO 4728 --- [auth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2026-05-06T21:43:16.387+05:30  INFO 4728 --- [auth-service] [restartedMain] c.e.auth_service.AuthServiceApplication  : Started AuthServiceApplication in 43.454 seconds (process running for 13299.06)
+2026-05-06T21:43:18.339+05:30  INFO 4728 --- [auth-service] [restartedMain] c.e.a.config.AdminUserInitializer        : Updated existing admin user with ADMIN role
+2026-05-06T21:43:18.342+05:30  INFO 4728 --- [auth-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-06T21:58:03.933+05:30  INFO 4728 --- [auth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-06T21:58:03.989+05:30  INFO 4728 --- [auth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-06T21:58:04.012+05:30  INFO 4728 --- [auth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-06T21:58:04.048+05:30  INFO 4728 --- [auth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-05-06T21:58:04.070+05:30  INFO 4728 --- [auth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-05-06T21:58:14.008+05:30  INFO 30316 --- [auth-service] [restartedMain] c.e.auth_service.AuthServiceApplication  : Starting AuthServiceApplication using Java 21.0.9 with PID 30316 (D:\ECommerce\ecommerce-app\auth-service\auth-service\target\classes started by DEV SANGAL in D:\ECommerce\ecommerce-app\auth-service)
+2026-05-06T21:58:14.012+05:30 DEBUG 30316 --- [auth-service] [restartedMain] c.e.auth_service.AuthServiceApplication  : Running with Spring Boot v3.5.13, Spring v6.2.17
+2026-05-06T21:58:14.014+05:30  INFO 30316 --- [auth-service] [restartedMain] c.e.auth_service.AuthServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-05-06T21:58:14.152+05:30  INFO 30316 --- [auth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-06T21:58:14.153+05:30  INFO 30316 --- [auth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-06T21:58:16.176+05:30  INFO 30316 --- [auth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-06T21:58:16.357+05:30  INFO 30316 --- [auth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 1 JPA repository interface.
+2026-05-06T21:58:18.331+05:30  INFO 30316 --- [auth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2026-05-06T21:58:18.530+05:30  INFO 30316 --- [auth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-06T21:58:18.534+05:30  INFO 30316 --- [auth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-05-06T21:58:18.785+05:30  INFO 30316 --- [auth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-06T21:58:18.788+05:30  INFO 30316 --- [auth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4634 ms
+2026-05-06T21:58:19.489+05:30  INFO 30316 --- [auth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-06T21:58:19.755+05:30  INFO 30316 --- [auth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.45.Final
+2026-05-06T21:58:19.869+05:30  INFO 30316 --- [auth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-06T21:58:20.484+05:30  INFO 30316 --- [auth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-06T21:58:20.555+05:30  INFO 30316 --- [auth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-06T21:58:21.667+05:30  INFO 30316 --- [auth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52be9cb7
+2026-05-06T21:58:21.675+05:30  INFO 30316 --- [auth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-06T21:58:22.082+05:30  INFO 30316 --- [auth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-06T21:58:23.981+05:30  INFO 30316 --- [auth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-06T21:58:24.172+05:30  INFO 30316 --- [auth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-06T21:58:25.000+05:30  WARN 30316 --- [auth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-06T21:58:25.113+05:30  WARN 30316 --- [auth-service] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0f51c8b7-62fe-47b1-803f-24524144a24a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-06T21:58:25.141+05:30  INFO 30316 --- [auth-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-06T21:58:27.102+05:30  WARN 30316 --- [auth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-05-06T21:58:27.175+05:30  INFO 30316 --- [auth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2026-05-06T21:58:27.194+05:30  INFO 30316 --- [auth-service] [restartedMain] c.e.auth_service.AuthServiceApplication  : Started AuthServiceApplication in 14.109 seconds (process running for 15.145)
+2026-05-06T22:00:30.483+05:30  INFO 30316 --- [auth-service] [http-nio-8083-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-06T22:00:30.508+05:30  INFO 30316 --- [auth-service] [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-06T22:00:30.632+05:30  INFO 30316 --- [auth-service] [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 123 ms
+2026-05-06T22:00:31.415+05:30  INFO 30316 --- [auth-service] [http-nio-8083-exec-3] c.e.a.controller.AuthController          : Login attempt for username: ADMIN
+2026-05-06T22:00:31.418+05:30 DEBUG 30316 --- [auth-service] [http-nio-8083-exec-3] c.e.auth_service.service.AuthService     : Attempting to authenticate user: ADMIN
+2026-05-06T22:00:31.576+05:30  WARN 30316 --- [auth-service] [http-nio-8083-exec-3] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2026-05-06T22:00:31.577+05:30  WARN 30316 --- [auth-service] [http-nio-8083-exec-3] c.e.auth_service.service.AuthService     : Authentication failed for username: ADMIN - Invalid credentials
+2026-05-06T22:00:31.591+05:30  WARN 30316 --- [auth-service] [http-nio-8083-exec-3] c.e.a.exception.GlobalExceptionHandler   : InvalidCredentialsException caught: Invalid Credentials
+2026-05-06T22:00:31.688+05:30  WARN 30316 --- [auth-service] [http-nio-8083-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ecommerce.auth_service.exception.InvalidCredentialsException: Invalid Credentials]
+2026-05-06T22:04:01.717+05:30  WARN 30316 --- [auth-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m9s911ms675µs500ns).
+2026-05-06T22:06:21.432+05:30  INFO 30316 --- [auth-service] [http-nio-8083-exec-4] c.e.a.controller.AuthController          : Login attempt for username: admin
+2026-05-06T22:06:21.441+05:30 DEBUG 30316 --- [auth-service] [http-nio-8083-exec-4] c.e.auth_service.service.AuthService     : Attempting to authenticate user: admin
+2026-05-06T22:06:22.281+05:30  WARN 30316 --- [auth-service] [http-nio-8083-exec-4] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2026-05-06T22:06:22.282+05:30  WARN 30316 --- [auth-service] [http-nio-8083-exec-4] c.e.auth_service.service.AuthService     : Authentication failed for username: admin - Invalid credentials
+2026-05-06T22:06:22.297+05:30  WARN 30316 --- [auth-service] [http-nio-8083-exec-4] c.e.a.exception.GlobalExceptionHandler   : InvalidCredentialsException caught: Invalid Credentials
+2026-05-06T22:06:22.313+05:30  WARN 30316 --- [auth-service] [http-nio-8083-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ecommerce.auth_service.exception.InvalidCredentialsException: Invalid Credentials]
+2026-05-06T22:12:24.443+05:30  INFO 30316 --- [auth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-06T22:12:24.490+05:30  INFO 30316 --- [auth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-06T22:12:24.547+05:30  INFO 30316 --- [auth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-06T22:12:24.720+05:30  INFO 30316 --- [auth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-06T22:12:24.846+05:30  INFO 30316 --- [auth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-06T22:12:31.702+05:30  INFO 17828 --- [auth-service] [restartedMain] c.e.auth_service.AuthServiceApplication  : Starting AuthServiceApplication using Java 21.0.9 with PID 17828 (D:\ECommerce\ecommerce-app\auth-service\auth-service\target\classes started by DEV SANGAL in D:\ECommerce\ecommerce-app\auth-service)
+2026-05-06T22:12:31.707+05:30 DEBUG 17828 --- [auth-service] [restartedMain] c.e.auth_service.AuthServiceApplication  : Running with Spring Boot v3.5.13, Spring v6.2.17
+2026-05-06T22:12:31.709+05:30  INFO 17828 --- [auth-service] [restartedMain] c.e.auth_service.AuthServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-05-06T22:12:31.806+05:30  INFO 17828 --- [auth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-06T22:12:31.806+05:30  INFO 17828 --- [auth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-06T22:12:33.282+05:30  INFO 17828 --- [auth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-06T22:12:33.440+05:30  INFO 17828 --- [auth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interface.
+2026-05-06T22:12:34.689+05:30  INFO 17828 --- [auth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2026-05-06T22:12:34.716+05:30  INFO 17828 --- [auth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-06T22:12:34.717+05:30  INFO 17828 --- [auth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-05-06T22:12:34.782+05:30  INFO 17828 --- [auth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-06T22:12:34.782+05:30  INFO 17828 --- [auth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2975 ms
+2026-05-06T22:12:35.059+05:30  INFO 17828 --- [auth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-06T22:12:35.147+05:30  INFO 17828 --- [auth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.45.Final
+2026-05-06T22:12:35.207+05:30  INFO 17828 --- [auth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-06T22:12:35.578+05:30  INFO 17828 --- [auth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-06T22:12:35.620+05:30  INFO 17828 --- [auth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-06T22:12:36.218+05:30  INFO 17828 --- [auth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c72c222
+2026-05-06T22:12:36.222+05:30  INFO 17828 --- [auth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-06T22:12:36.360+05:30  INFO 17828 --- [auth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-06T22:12:37.280+05:30  INFO 17828 --- [auth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-06T22:12:37.390+05:30  INFO 17828 --- [auth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-06T22:12:37.877+05:30  WARN 17828 --- [auth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-06T22:12:37.924+05:30  WARN 17828 --- [auth-service] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7ae34dc7-c9b9-4df0-884c-136e4f7cdc61
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-06T22:12:37.935+05:30  INFO 17828 --- [auth-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-06T22:12:38.706+05:30  WARN 17828 --- [auth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-05-06T22:12:38.776+05:30  INFO 17828 --- [auth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2026-05-06T22:12:38.801+05:30  INFO 17828 --- [auth-service] [restartedMain] c.e.auth_service.AuthServiceApplication  : Started AuthServiceApplication in 7.892 seconds (process running for 8.733)
+2026-05-06T22:12:39.306+05:30  INFO 17828 --- [auth-service] [restartedMain] c.e.a.config.AdminUserInitializer        : Re-encoding admin password to BCrypt format
+2026-05-06T22:12:39.399+05:30  INFO 17828 --- [auth-service] [restartedMain] c.e.a.config.AdminUserInitializer        : Updated existing admin user
+2026-05-06T22:12:55.367+05:30  INFO 17828 --- [auth-service] [http-nio-8083-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-06T22:12:55.367+05:30  INFO 17828 --- [auth-service] [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-06T22:12:55.369+05:30  INFO 17828 --- [auth-service] [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-06T22:12:55.599+05:30  INFO 17828 --- [auth-service] [http-nio-8083-exec-2] c.e.a.controller.AuthController          : Login attempt for username: admin
+2026-05-06T22:12:55.600+05:30 DEBUG 17828 --- [auth-service] [http-nio-8083-exec-2] c.e.auth_service.service.AuthService     : Attempting to authenticate user: admin
+2026-05-06T22:12:55.683+05:30 DEBUG 17828 --- [auth-service] [http-nio-8083-exec-2] c.e.auth_service.service.AuthService     : User found and password matched for username: admin
+2026-05-06T22:12:55.736+05:30  INFO 17828 --- [auth-service] [http-nio-8083-exec-2] c.e.auth_service.service.AuthService     : JWT token generated successfully for username: admin
+2026-05-06T22:12:55.737+05:30  INFO 17828 --- [auth-service] [http-nio-8083-exec-2] c.e.a.controller.AuthController          : Login successful for username: admin
+2026-05-06T22:14:24.552+05:30  INFO 17828 --- [auth-service] [http-nio-8083-exec-3] c.e.a.controller.AuthController          : Login attempt for username: hodor
+2026-05-06T22:14:24.556+05:30 DEBUG 17828 --- [auth-service] [http-nio-8083-exec-3] c.e.auth_service.service.AuthService     : Attempting to authenticate user: hodor
+2026-05-06T22:14:24.732+05:30 DEBUG 17828 --- [auth-service] [http-nio-8083-exec-3] c.e.auth_service.service.AuthService     : User found and password matched for username: hodor
+2026-05-06T22:14:24.734+05:30  INFO 17828 --- [auth-service] [http-nio-8083-exec-3] c.e.auth_service.service.AuthService     : JWT token generated successfully for username: hodor
+2026-05-06T22:14:24.734+05:30  INFO 17828 --- [auth-service] [http-nio-8083-exec-3] c.e.a.controller.AuthController          : Login successful for username: hodor
+2026-05-06T22:16:58.960+05:30  INFO 17828 --- [auth-service] [http-nio-8083-exec-5] c.e.a.controller.AuthController          : Login attempt for username: admin
+2026-05-06T22:16:58.961+05:30 DEBUG 17828 --- [auth-service] [http-nio-8083-exec-5] c.e.auth_service.service.AuthService     : Attempting to authenticate user: admin
+2026-05-06T22:16:59.204+05:30 DEBUG 17828 --- [auth-service] [http-nio-8083-exec-5] c.e.auth_service.service.AuthService     : User found and password matched for username: admin
+2026-05-06T22:16:59.208+05:30  INFO 17828 --- [auth-service] [http-nio-8083-exec-5] c.e.auth_service.service.AuthService     : JWT token generated successfully for username: admin
+2026-05-06T22:16:59.209+05:30  INFO 17828 --- [auth-service] [http-nio-8083-exec-5] c.e.a.controller.AuthController          : Login successful for username: admin
+2026-05-06T22:31:10.413+05:30  INFO 17828 --- [auth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-06T22:31:10.523+05:30  INFO 17828 --- [auth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-06T22:31:10.619+05:30  INFO 17828 --- [auth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-06T22:31:10.830+05:30  INFO 17828 --- [auth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-06T22:31:10.986+05:30  INFO 17828 --- [auth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

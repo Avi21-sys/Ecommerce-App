@@ -63,15 +63,23 @@ public class JwtFilter implements GlobalFilter {
                 return exchange.getResponse().setComplete();
             }
             String username = jwtUtil.extractUsername(token);
+            String role = jwtUtil.extractRole(token);
+
+            if (isAdminProtectedPath(path, method) && !"ADMIN".equalsIgnoreCase(role)) {
+                log.warn("Forbidden admin access attempt to {} by userId={} role={}", path, userId, role);
+                exchange.getResponse().setStatusCode(org.springframework.http.HttpStatus.FORBIDDEN);
+                return exchange.getResponse().setComplete();
+            }
 
             // Add userId to request header for downstream services
             ServerWebExchange modifiedExchange = exchange.mutate()
                     .request(r -> r
                             .header("X-User-Id", userId)
-                            .header("X-Username", username == null ? "" : username))
+                            .header("X-Username", username == null ? "" : username)
+                            .header("X-Role", role == null ? "" : role))
                     .build();
 
-            log.info("Authenticated request to {} for userId={} username={}", path, userId, username);
+            log.info("Authenticated request to {} for userId={} username={} role={}", path, userId, username, role);
 
             return chain.filter(modifiedExchange);
         } catch (Exception e) {
@@ -81,4 +89,14 @@ public class JwtFilter implements GlobalFilter {
         }
     }
 
+    private boolean isAdminProtectedPath(String path, HttpMethod method) {
+        if (path.startsWith("/api/orders/admin/")) {
+            return true;
+        }
+
+        return path.startsWith("/api/products")
+                && method != null
+                && !HttpMethod.GET.equals(method)
+                && !HttpMethod.OPTIONS.equals(method);
+    }
 }

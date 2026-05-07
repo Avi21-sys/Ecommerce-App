@@ -63,6 +63,21 @@ public class ProductController {
         return createdProduct;
     }
 
+    @PutMapping("/{id}")
+    public ProductDto updateProduct(@PathVariable Long id, @Valid @RequestBody ProductDto dto) {
+        logger.info("Request received: Update product with id: {}", id);
+        ProductDto updatedProduct = service.updateProduct(id, dto);
+        logger.info("Product updated successfully with id: {}", updatedProduct.getId());
+        return updatedProduct;
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteProduct(@PathVariable Long id) {
+        logger.info("Request received: Delete product with id: {}", id);
+        service.deleteProduct(id);
+        logger.info("Product deleted successfully with id: {}", id);
+    }
+
     @GetMapping("/filter")
     public Page<ProductDto> filter(
             @RequestParam int page,

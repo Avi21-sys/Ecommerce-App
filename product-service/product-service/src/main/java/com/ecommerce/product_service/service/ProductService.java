@@ -81,6 +81,40 @@ public class ProductService {
         return convertToDTO(savedProduct);
     }
 
+    public ProductDto updateProduct(Long id, ProductDto dto) {
+        logger.debug("Updating product with id: {}", id);
+
+        Product product = repo.findById(id)
+                .orElseThrow(() -> new ProductNotFoundException("Product not found with id: " + id));
+
+        if (dto.getName() == null || dto.getName().trim().isEmpty()) {
+            throw new InvalidProductDataException("Product name is required");
+        }
+        if (dto.getPrice() <= 0) {
+            throw new InvalidProductDataException("Product price must be positive");
+        }
+        if (dto.getCategory() == null || dto.getCategory().trim().isEmpty()) {
+            throw new InvalidProductDataException("Product category is required");
+        }
+
+        product.setName(dto.getName());
+        product.setPrice(dto.getPrice());
+        product.setImage(dto.getImage());
+        product.setCategory(dto.getCategory());
+
+        Product savedProduct = repo.save(product);
+        logger.info("Product updated successfully with id: {}", savedProduct.getId());
+        return convertToDTO(savedProduct);
+    }
+
+    public void deleteProduct(Long id) {
+        logger.debug("Deleting product with id: {}", id);
+        Product product = repo.findById(id)
+                .orElseThrow(() -> new ProductNotFoundException("Product not found with id: " + id));
+        repo.delete(product);
+        logger.info("Product deleted successfully with id: {}", id);
+    }
+
     /**
      * Filter products with optional keyword, category, and server-side sorting.
      *

@@ -52,6 +52,12 @@ public class OrderController {
         }
     }
 
+    @GetMapping("/admin/all")
+    public List<OrderDto> getAllOrders(@RequestHeader("X-Role") String role){
+        logger.info("Fetching all orders for admin role: {}", role);
+        return service.getAllOrders();
+    }
+
     /**
      * Get a specific order by ID
      */

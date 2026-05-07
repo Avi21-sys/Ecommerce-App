@@ -31,9 +31,9 @@ public class AuthService {
 
         if (user != null && encoder.matches(password, user.getPassword())) {
             logger.debug("User found and password matched for username: {}", username);
-            String token = jwtUtil.generateToken(user.getId(), user.getUsername());
+            String token = jwtUtil.generateToken(user.getId(), user.getUsername(), user.getRole());
             logger.info("JWT token generated successfully for username: {}", username);
-            return new LoginResponse(token, username);
+            return new LoginResponse(token, username, user.getRole());
         }
 
         logger.warn("Authentication failed for username: {} - Invalid credentials", username);
@@ -52,12 +52,12 @@ public class AuthService {
         logger.debug("Username {} is available, proceeding with registration", username);
         String encodedPassword = encoder.encode(password);
 
-        User saved = repo.save(new User(null, username, encodedPassword));
+        User saved = repo.save(new User(null, username, encodedPassword, "USER"));
         logger.debug("User saved to database with ID: {}", saved.getId());
 
-        String token = jwtUtil.generateToken(saved.getId(), saved.getUsername());
+        String token = jwtUtil.generateToken(saved.getId(), saved.getUsername(), saved.getRole());
         logger.info("New user registered successfully with username: {}", username);
 
-        return new LoginResponse(token, saved.getUsername());
+        return new LoginResponse(token, saved.getUsername(), saved.getRole());
     }
 }

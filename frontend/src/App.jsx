@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Checkout from "./pages/Checkout";
 import Login from "./pages/Login";
 import PrivateRoute from "./components/PrivateRoute";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
@@ -31,6 +32,14 @@ function App() {
               }
             />
             <Route path="/login" element={<Login />} />
+            <Route
+              path="/admin"
+              element={
+                <PrivateRoute requireAdmin>
+                  <Admin />
+                </PrivateRoute>
+              }
+            />
           </Routes>
         </main>
       </div>

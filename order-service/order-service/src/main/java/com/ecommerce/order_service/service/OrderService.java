@@ -168,6 +168,14 @@ public class OrderService {
                 .toList();
     }
 
+    public List<OrderDto> getAllOrders() {
+        logger.info("Fetching all orders for admin view");
+        return orderRepo.findAll()
+                .stream()
+                .map(this::toDto)
+                .toList();
+    }
+
     /**
      * Retrieve a single order by ID
      */

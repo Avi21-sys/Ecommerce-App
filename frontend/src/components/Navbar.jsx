@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { API_BASE_URL, fetchWithAuth, isLoggedIn as hasValidSession } from "../utils/api";
+import { API_BASE_URL, fetchWithAuth, isLoggedIn as hasValidSession, isAdmin } from "../utils/api";
 import { CartContext } from "../context/CartContext";
 
 const Navbar = () => {
@@ -9,6 +9,7 @@ const Navbar = () => {
     useContext(CartContext);
 
     const isLoggedIn = hasValidSession();
+    const adminUser = isAdmin();
 
     const fetchCartCount = () => {
         if (!isLoggedIn) return;
@@ -53,6 +54,9 @@ const Navbar = () => {
 
             <div className="navbar__links">
                 <Link to="/" className="navbar__link">Home</Link>
+                {adminUser && (
+                    <Link to="/admin" className="navbar__link">Admin</Link>
+                )}
                 {isLoggedIn && (
                     <Link to="/cart" className="navbar__link navbar__cart-link">
                         Cart <span className="navbar__badge">{cartCount}</span>

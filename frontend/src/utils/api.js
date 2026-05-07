@@ -14,6 +14,15 @@ const decodeTokenPayload = (token) => {
     }
 };
 
+export const getTokenPayload = () => {
+    const token = localStorage.getItem("token");
+    if (!token || token.split(".").length !== 3) {
+        return null;
+    }
+
+    return decodeTokenPayload(token);
+};
+
 export const getValidToken = () => {
     const token = localStorage.getItem("token");
     if (!token || token.split(".").length !== 3) {
@@ -37,6 +46,8 @@ export const getValidToken = () => {
 };
 
 export const isLoggedIn = () => !!getValidToken();
+export const getUserRole = () => getTokenPayload()?.role || "";
+export const isAdmin = () => getUserRole().toUpperCase() === "ADMIN";
 
 export const fetchWithAuth = (url, options = {}) => {
     const token = getValidToken();
